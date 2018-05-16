@@ -25,7 +25,7 @@ SECRET_KEY = '!#1bv7@!xvlfjh#(ye0!+$x8zl+tjrs)a5z1s6qu+tbxl-uso1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['192.168.7.253','127.0.0.1']
+ALLOWED_HOSTS = ['192.168.0.12', '192.168.7.77']
 
 
 # Application definition
@@ -37,19 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'shop_paypal',
-    'paypal.standard.ipn',
     'mydj',
 ]
-PAYPAL_TEST = True
-
-
-#SHOP_PAYPAL = {
-#    'API_ENDPOINT': 'https://api.sandbox.paypal.com',
-#    'MODE': 'sandbox',
-#    'CLIENT_ID': '<client-id-as-delivered-by-PayPal>',
-#    'CLIENT_SECRET': '<client-secret-as-delivered-by-PayPal>',
-#}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -79,7 +68,12 @@ TEMPLATES = [
     },
 ]
 
+#Bootstrap theme load
+BOOTSTRAP3 = { 'theme_url':
+'/static/bootstrap/css/bootstrap.min.css', }
+
 WSGI_APPLICATION = 'mydj.wsgi.application'
+
 
 
 # Database

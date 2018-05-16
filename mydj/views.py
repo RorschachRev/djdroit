@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-#import .views_paypal
+
 
 def expo(request):
 	expo=""
