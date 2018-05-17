@@ -4,7 +4,8 @@ from django.http import HttpResponseRedirect
 
 def expo(request):
 	expo=""
-	return render(request,'pages/expo.html', { 'expo':expo } )
+    expomap=''
+	return render(request,'pages/expo.html', { 'expo':expo, 'map':expomap  } )
 def index(request):
 	return render(request,'pages/index.html', { 'index':index } )
 def shop(request):
