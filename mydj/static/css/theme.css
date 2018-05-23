@@ -1558,7 +1558,7 @@ header .navbar-nav .nav-link {
 
 header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
-  height: 80px;
+  height: 100px;
   position: relative;
   width: 100%;
   z-index: 1020;
@@ -1569,7 +1569,7 @@ header .navbar {
 }
 
 header .navbar-header {
-  height: 80px;
+  height: 100px;
   width: 100%;
 }
 
