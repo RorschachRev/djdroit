@@ -9,14 +9,14 @@ class Profile(models.Model):
 	company_name = models.TextField(max_length=200, blank=True)
 	#is_artist = models.BooleanField(default=False)
 
-	#@receiver(post_save, sender=User)
-	def create_user_profile(sender, instance, created, **kwargs):
-		if created:
-			Profile.objects.create(user=instance)
+@receiver(post_save, sender=User)
+def create_user_profile(sender, instance, created, **kwargs):
+	if created:
+	Profile.objects.create(user=instance)
 
-	#@receiver(post_save, sender=User)
-	def save_user_profile(sender, instance, **kwargs):
-		instance.profile.save()
+@receiver(post_save, sender=User)
+def save_user_profile(sender, instance, **kwargs):
+	instance.profile.save()
 
 class Booth(models.Model):
     booth_name= models.BooleanField(default=False)
