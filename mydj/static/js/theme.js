@@ -57,12 +57,12 @@
    
     $window.on('load', function(){
         
-        /** Bootstrap scrollspy */
+        /** Bootstrap scrollspy 
         var ww = Math.max($window.width(), window.innerWidth);
         $body.scrollspy({    
             target: '#navigation',
             offset: ww > 992 ? navHeightShrink : navHeight
-        });
+        }); */
     });
     
     
@@ -105,7 +105,7 @@
        
         $window.on('resize', function(){
             
-            /** Bootstrap scrollspy */
+            /** Bootstrap scrollspy 
             var dataScrollSpy = $body.data('bs.scrollspy'),
                 ww = Math.max($window.width(), window.innerWidth),
                 offset = ww > 992 ? navHeightShrink : navHeight;
@@ -113,7 +113,7 @@
             dataScrollSpy._config.offset = offset;
             $body.data('bs.scrollspy', dataScrollSpy);
             $body.scrollspy('refresh');
-            
+            */
             
             /** Gallery grid */
             if ($.fn.isotope){
@@ -122,7 +122,7 @@
         });
         
         
-        /** Page scroll */ 
+        /** Page scroll  
         $pageScrollLink.on('click', function(e){
             var anchor = $(this),
                 target = anchor.attr('href');
@@ -141,7 +141,7 @@
             // Automatically retract the navigation after clicking on one of the menu items.
             $navbarCollapse.collapse('hide');
         };
-        
+        */
         
         /** Counter Number */
         if ($.fn.countTo){
