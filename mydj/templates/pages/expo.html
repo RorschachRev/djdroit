@@ -21,7 +21,8 @@
 window.addEventListener('DOMContentLoaded', function() {
 	var canvas = document.getElementById('renderCanvas'); //get the canvas element
 	var engine = new BABYLON.Engine(canvas, true);  //generate the babylon 3D engine
-	
+	// engine.enableOfflineSupport = false; //This makes it not ask for the manifest file
+
 	/*********** This adds the create scene function *************/
 	/** var createScene = function() {
 	    // Create a basic BJS Scene object (scene space).
