@@ -3,7 +3,7 @@ from django.http import HttpResponseRedirect
 from .forms import UserForm#, ProfileForm
 from mydj import settings
 from .models import Subscription
-import stripe
+#import stripe
 
 def signup(request):
 	if request.method == 'POST':
@@ -55,7 +55,8 @@ def update_profile(request):
     
 # for STRIPE API testing    
 def payment_form(request):
-	context = { "stripe_key": settings.STRIPE_PUBLIC_KEY }
+	#context = { "stripe_key": settings.STRIPE_PUBLIC_KEY }
+	context = {}
 	return render(request, "pages/payment_form.html", context)
 	
 # for STRIPE testing
