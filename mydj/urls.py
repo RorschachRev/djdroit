@@ -33,5 +33,8 @@ urlpatterns = [
     url(r'^edit.html$', views.edit, name='edit'),
     url(r'^admin/', admin.site.urls),
     url(r'^signup.html$', views.signup, name='signup'),
+    url(r'^payment_form.html$', views.payment_form, name='payment_form'), # url for testing STRIPE API
+    url(r'^checkout$', views.checkout, name='checkout_page'), # url that STRIPE routes to after payment validation
+    url(r'^thank_you_page.html', views.thank_you, name='thank_you'), # testing STRIPE confirmation
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

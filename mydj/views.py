@@ -1,6 +1,9 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
-from .forms import UserForm, ProfileForm
+from .forms import UserForm#, ProfileForm
+from mydj import settings
+from .models import Subscription
+import stripe
 
 def signup(request):
 	if request.method == 'POST':
@@ -49,3 +52,41 @@ def update_profile(request):
         'user_form': user_form,
         'profile_form': profile_form
     })
+    
+# for STRIPE API testing    
+def payment_form(request):
+	context = { "stripe_key": settings.STRIPE_PUBLIC_KEY }
+	return render(request, "pages/payment_form.html", context)
+	
+# for STRIPE testing
+def checkout(request):
+	stripe.api_key = settings.STRIPE_SECRET_KEY
+	# hardcoded for testing purposes
+	new_sub = Subscription(
+		price = 20,
+		subscription = 1,
+		web_shop_enabled = True,
+	)
+	
+	if request.method == 'POST':
+		token = request.POST.get('stripeToken')
+	
+	try:
+		charge = stripe.Charge.create(
+			amount = 2000, #amount is in pennies ¿?
+			currency = 'usd',
+			source = token,
+			description = 'The subscription __str__()'
+		)
+		
+		new_sub.charge_id = charge.id
+	
+	except stripe.error.CardError as ce:
+		return False, ce
+	
+	else:
+		new_sub.save()
+		return redirect('pages/thank_you_page.html')
+		
+def thank_you(request):
+	return render(request, 'pages/thank_you_page.html')
