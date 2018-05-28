@@ -108,4 +108,5 @@ db.sqlite3
 
 # mypy
 .mypy_cache/
-
+pyvenv.cfg
+lib64
