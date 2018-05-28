@@ -1,34 +1,44 @@
-<!-- Header Section 1 NavBar Header-->
-<header class="header-light fixed-top">
+{% load staticfiles %}
+<nav class="navbar navbar-default navbar-transparent navbar-fixed-top" color-on-scroll="200">
+    <!-- if you want to keep the navbar hidden you can add this class to the navbar "navbar-burger"-->
     <div class="container">
-        <div class="row">
-            <div class="col-lg-3 navbar-header">
-                <a class="navbar-brand page-scroll" href="/index.html">
-                    <img src="/static/img/InvCon_logo.png" alt="" class="logo-text-dark">
-                    <img src="/static/img/InvCon_logo.png" alt="" class="logo-text-light">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-header" aria-controls="navbar-header" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-            </div>
+        <div class="navbar-header">
+            <button id="menu-toggle" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar bar1"></span>
+                <span class="icon-bar bar2"></span>
+                <span class="icon-bar bar3"></span>
+            </button>
+            <a href="{% url 'index' %}" class="navbar-brand">
+                <img src="{% static 'images/logo.png' %}">
+            </a>
+        </div>
+        <div class="collapse navbar-collapse">
 
-            <!-- Section 2 Top Page Links-->
-
-
-            <div class="col-lg-6 navbar-wrapper justify-content-center">
-                <div id="navigation" class="navbar navbar-expand-lg">
-                    <div class="collapse navbar-collapse" id="navbar-header">
-                        <ul class="navbar-nav" style="list-style-type: none;">
+            <ul class="nav navbar-nav navbar-right navbar-uppercase">
                             <li class="nav-item">
-                                <a class="nav-link page-scroll" href="/index.html#about">About</a>
+                                <a class="nav-link" href="/index.html#about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link page-scroll" href="/expo.html">Expo</a>
+                                <a class="nav-link" href="/expo.html">Expo</a>
+                            </li>
+                            {% if user.is_authenticated %}
+                            {% if user.is_staff %}
+                            <li class="nav-item">
+                                <a href="/admin/">Admin</a>
+                            </li>
+                            {% endif %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="/logout/">Logout</a>
+                            </li>                            
+                            {% else %}
+                            <li class="nav-item">
+                                <a class="nav-link" href="/signup.html">Sign Up</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link page-scroll" href="/signup.html">Sign Up</a>
+                                <a class="nav-link" href="/login/">Login</a>
                             </li>
-
+                            {% endif %}
                         <!--
                             <li class="nav-item">
                             
@@ -47,44 +57,8 @@
                                 <a class="nav-link page-scroll" href="#contact">Contact Us</a>
                             </li>
                          -->
-
-
-                        </ul>
-                    </div>
-                    <!-- //.navbar-collapse -->
-                </div>
-                <!-- //.navbar -->
-            </div>
-            
-            <!-- section 3 Login/Logout Button-->
-     
-            <div class="col-lg-3 d-none d-lg-block pr-lg-0">
-                <div class="align-items-center d-flex h-100 justify-content-end">
-                   
-
-                                {% if user.is_authenticated %}
-                                {% if user.is_staff %}
-
-                                    <a href="/admin/" class="btn btn-extra-small btn-orange page-scroll">Admin</a>
-
-                                {% endif %}
-
-                                <a href="" class="btn btn-extra-small btn-orange page-scroll">Logout</a>
-
-                                {% else %}
-
-                            <a href="/login/" class="btn btn-extra-small btn-orange page-scroll">Login</a>
-
-                            {% endif %}
-
-                       
-
-                </div>
-                <!-- //.align-items-center -->
-            </div>
-            <!-- //.col-lg-3 -->
+            </ul>
         </div>
-        <!-- //.row -->
+        <!-- /.navbar-collapse -->
     </div>
-    <!-- //.container -->
-</header>
+</nav>

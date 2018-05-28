@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mydj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'mydj/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -70,7 +70,7 @@ TEMPLATES = [
 
 #Bootstrap theme load
 BOOTSTRAP3 = { 'theme_url':
-'/static/bootstrap/css/bootstrap.min.css', }
+'/static/css/bootstrap.css', }
 
 WSGI_APPLICATION = 'mydj.wsgi.application'
 
