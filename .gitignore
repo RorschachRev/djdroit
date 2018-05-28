@@ -110,3 +110,4 @@ db.sqlite3
 .mypy_cache/
 pyvenv.cfg
 lib64
+nohup.out
