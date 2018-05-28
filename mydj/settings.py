@@ -15,16 +15,6 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# STRIPE settings, holds API keys
-# These are the test keys given by STRIPE, not actual API keys
-
-#	Please note that you want to keep your API keys secret. In production, 
-#	make sure to set your live api keys to these two environment variables. 
-#	Because we're in sandbox (dev) mode, we don't need to set the environment 
-#	variables therefore our test keys will be used instead.
-STRIPE_PUBLIC_KEY = os.environ.get("STRIPE_SECRET_KEY", "pk_test_xNzV2xk7hWNQtz1RLsCL2Yct")
-STRIPE_SECRET_KEY = os.environ.get("STRIPE_SECRET_KEY", "sk_test_WZTmX5bl9xjuQdzW5yawKHRT")
-
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -65,7 +55,7 @@ ROOT_URLCONF = 'mydj.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates')],
+        'DIRS': [os.path.join(BASE_DIR, 'mydj/templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -80,7 +70,7 @@ TEMPLATES = [
 
 #Bootstrap theme load
 BOOTSTRAP3 = { 'theme_url':
-'/static/bootstrap/css/bootstrap.min.css', }
+'/static/css/bootstrap.css', }
 
 WSGI_APPLICATION = 'mydj.wsgi.application'
 
