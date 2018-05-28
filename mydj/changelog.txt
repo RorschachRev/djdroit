@@ -1,0 +1,17 @@
+5.25.18 - Alex
+    Tasks worked on:
+        -Setting up STRIPE to create a simple checkout - you can access the process by going to 127.0.0.1:8000/payment_form.html
+            * I had to create a few templates, add a few urls, and add views. Most of it should be documented with comments
+            ** The STRIPE seems to be hitting the db model Subscription, as seen by checking the admin console, but still throws an error detailed below
+        
+    Problems encountered:
+        -When running through the payment_form.html process, after the code completes, a UnicodeDecodeError gets raised: "'utf-8' codec can't decode byte 0xbf in position 2304: invalid start byte"
+        -mydj/admin doesn't work with the models/Profile model. I'm assuming it's a protected keyword for a default django model, but I'm unsure. I commented out any use of the Profile model, the locations this occurs at is:
+            * views.py, line 3
+            * models.py, lines 17-19
+                ** also in models.py, I tried renaming Profile to ProfileTest to see if it was a protected keyword
+            * admin.py, line 2 & line 5
+            * forms.py, line 3 & lines 10-13
+
+    Tasks unable to work on:
+        -Fixing up the Sign-Up/Login process and pages
