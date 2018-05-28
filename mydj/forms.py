@@ -1,7 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from .models import Store
-from login.models import Profile
+from .models import Profile, Store
 
 class SignUpForm(forms.ModelForm):
 	class Meta:
@@ -22,3 +21,4 @@ class StoreEditForm(forms.ModelForm):
 	class Meta:
 		model = Store 
 		fields= ('store_name',)
+
