@@ -3,7 +3,8 @@
 {% block title %}Signup{% endblock %}
 
 {% block content %}
-	<h2>Profile:</h2>
+    <div id="main" style="padding-top: 86px">
+	    <h2>Profile:</h2>
 		<form action="" method="post">
 			<table>
 				{% csrf_token %}
@@ -21,5 +22,6 @@
 				</li>
 				{% endfor %}
 			</ul>
+    </div>
 {% endif %}
 {% endblock %}
