@@ -1,3 +1,4 @@
+
 .custom-header-title {
     letter-spacing: 2px;
     font-weight: bold !important;
@@ -50,16 +51,16 @@
     padding: 100px 0;
 }
 
-.each-feature.secure-publishing {
-    background-image: url('../images/background-images/artist-payout.jpg');
+.each-feature.event-idea {
+    background-image: url('../images/background-images/blackboard.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
 }
 
-.each-feature.artist-payout {
-    background-image: url('../images/background-images/content-licenses.jpg');
+.each-feature.event-sponsor {
+    background-image: url('../static/img/background-images/blackboard.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
