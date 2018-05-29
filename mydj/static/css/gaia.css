@@ -78,6 +78,37 @@
 
 /* Fonts families end*/
 
+.event-sponsor {
+    background-image: url('/static/img/background-images/blackboard.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.event-sponsor .info-icon h3 {
+    background-color: transparent;
+    border-radius: 5px;
+    background-color: #434547;
+    opacity: 0.85;
+    filter: alpha(opacity=90);
+}
+.event-sponsor .info-icon p {
+    margin-top: 50px;
+    padding: 0px 10px 10px 5px;
+    background-color: transparent;
+    border-radius: 5px;
+    background-color: #434547;
+    opacity: 0.85;
+    filter: alpha(opacity=90);
+}
+.round-bg {
+    margin-top: 150px; 
+    background-color: #434547;
+    border-radius: 5px; 
+    padding: 3px 8px 8px 3px;
+    opacity: 0.85;
+    background-blend-mode: darken; 
+}
 
 /***************Beginning of MODS by Gerald, 2018.05.28 ***************/
 
@@ -491,7 +522,7 @@ body > .navbar-collapse a {
 
 .info-icon .description {
     margin-top: 15px;
-    color: #777777;
+    color: white;
 }
 
 .avatar {

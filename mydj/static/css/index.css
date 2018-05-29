@@ -59,13 +59,6 @@
     color: white;
 }
 
-.each-feature.event-sponsor {
-    background-image: url('../static/img/background-images/blackboard.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-}
 
 .each-feature.no-fee-token-purchase {
     background-image: url('../images/background-images/easy-purchase-and-payment.jpg');
