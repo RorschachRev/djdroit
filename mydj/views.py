@@ -30,6 +30,15 @@ def index(request):
 	
 def shop(request):
 	return render(request,'pages/shop.html', { 'shop':shop } )
+
+def members(request):
+	return render(request,'pages/members.html', { 'members':members } )
+
+def ardemo(request):
+	return render(request,'pages/ardemo.html', { 'ardemo':ardemo } )
+
+def contact(request):
+	return render(request,'pages/contact.html', { 'contact':contact } )
 	
 def expomap(request):
 	return render(request,'pages/expomap.html', { 'map':expomap } )
