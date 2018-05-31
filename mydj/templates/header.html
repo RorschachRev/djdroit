@@ -10,7 +10,7 @@
                 <span class="icon-bar bar3"></span>
             </button>
             <a href="{% url 'index' %}" class="navbar-brand">
-                <img src="{% static 'img/InvCon_logo.png' %}" style="height: 160%">
+                <img src="{% static 'img/logos/GroupOnBlack.png' %}" style="height: 100%">
             </a>
         </div>
         <div class="collapse navbar-collapse">
@@ -20,7 +20,19 @@
                                 <a class="nav-link" href="/index.html#about">About</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/static/index.html">Expo</a>
+                                <a class="nav-link" href="/index.html#services">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html#vidis">Vidis</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="/index.html#partners">Partners</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="/index.html#team">Our Team</a>
+                            </li>
+                             <li class="nav-item">
+                                <a class="nav-link" href="/index.html#contact">Contact Us</a>
                             </li>
                             {% if user.is_authenticated %}
                             {% if user.is_staff %}
@@ -32,9 +44,9 @@
                                 <a class="nav-link" href="/logout/">Logout</a>
                             </li>                            
                             {% else %}
-                            <li class="nav-item">
+                            <!-- <li class="nav-item">
                                 <a class="nav-link" href="/signup.html">Sign Up</a>
-                            </li>
+                            </li> -->
                             <li class="nav-item">
                                 <a class="nav-link" href="/login/">Login</a>
                             </li>

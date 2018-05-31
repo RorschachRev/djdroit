@@ -49,6 +49,7 @@
 
 .section.features .each-feature {
     padding: 100px 0;
+    margin-top: 10px;
 }
 
 .each-feature.event-idea {
