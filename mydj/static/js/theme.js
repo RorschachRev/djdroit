@@ -9,12 +9,11 @@
         $body = $('body'),
         $header = $('header'),
         $navbar = $('.navbar'),
+        /* $navHeight = $('#info-nav-container').height()+1, */
         $navbarCollapse = $('.navbar-collapse'),
         $pageScrollLink = $('.page-scroll'),
         $galleryGrid = $('.gallery-grid'),
-        $scrollToTop = $('.scroll-to-top'),
-        navHeight = 80,
-        navHeightShrink = 60;
+        $scrollToTop = $('.scroll-to-top');
       
     /** Detect mobile device */
     var isMobile = {

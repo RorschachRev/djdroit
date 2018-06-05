@@ -82,8 +82,8 @@
 
 /*IMAGE THEMES */
 .event-top {
-    background-image: url('/static/img/background-images/servers.jpg');
-    background-position: center;
+    background-image: url('/static/img/dg-ar-datacenter.jpg');
+    background-position: center-top;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -92,7 +92,7 @@
 .event- {
     background-image: url('/static/img/background-images/darklight.jpg');
     background-position: center;
-    background-repeat: repeat;
+    background-repeat: no-repeat;
     background-size: cover;
     color: white;
 }
@@ -114,11 +114,11 @@
 }
 
 .event-image-3 {
-    background-image: url('/static/img/background-images/bridge-buildings-city.jpg');
+    background-image: url('/static/img/background-images/blueprint.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    color: white;
+    color: black;
 }
 
 .event-image-4 {
@@ -129,6 +129,45 @@
     color: white;
 }
 
+.event-image-5 {
+    background-image: url('/static/img/background-images/abstract-bulb-1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.event-image-6 {
+    background-image: url('/static/img/background-images/abstract-bulb-2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.event-image-7 {
+    background-image: url('/static/img/background-images/bg3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.event-image-8 {
+    background-image: url('/static/img/background-images/electrician.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+
+.event-image-9 {
+    background-image: url('/static/img/background-images/house-key.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black !important;
+}
 
 .event-sponsor .info-icon h3 {
     background-color: transparent;
@@ -282,6 +321,11 @@
   font-weight: 400 !important;
 }
 
+.font-w-500 {
+  font-weight: 500 !important;
+  text-decoration-color: black;
+}
+
 .font-w-600 {
   font-weight: 600 !important;
 }
@@ -413,26 +457,26 @@ h1, .h1 {
 }
 
 h2, .h2 {
-    font-size: 2.4em;
+    font-size: 2.65em;
     line-height: 1.25;
-    margin: 0.4em 0;
+    margin: 0.5em 0;
     font-weight: bold;
 }
 
 h3, .h3 {
-    font-size: 1.61em;
-    line-height: 1.05em;
+    font-size: 2em;
+    line-height: 1em;
     margin-top: 15px;
     margin-bottom: 15px;
 }
 
 h4, .h4 {
-    font-size: 1.3em;
+    font-size: 1.5em;
     line-height: 1.714285714em;
 }
 
 h5 {
-    font-size: 1.2em;
+    font-size: 1.25em;
 }
 
 p {
@@ -491,7 +535,6 @@ a:hover {
 
 .title-modern {
     font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: 200;
 }
 
 .text-gray {
@@ -855,6 +898,7 @@ a,
     border-color: #888888;
     color: #888888;
     text-transform: uppercase;
+    padding-top: 15px;
 }
 
 .btn:hover, .btn:focus, .btn:active, .btn.active, .open > .btn.dropdown-toggle,
@@ -1741,15 +1785,15 @@ a,
 }
 
 .navbar .navbar-brand {
-    margin: 10px 0px;
-    padding: 15px 15px;
+    margin: 0px 0px;
+    padding: 0px 0px;
     font-size: 20px;
     line-height: 22px;
 }
 
 .navbar .navbar-nav > li > a {
-    padding: 10px 15px;
-    margin: 15px 3px;
+    padding: 10px 10px;
+    margin: 10px;
     line-height: 18px;
 }
 
@@ -1768,7 +1812,7 @@ a,
 
 .navbar .navbar-nav > li > a.btn {
     margin: 15px 3px;
-    padding: 10px 20px;
+    padding: 10px 10px;
 }
 
 .navbar .navbar-nav > li > a.btn-round {
@@ -1778,12 +1822,11 @@ a,
 .navbar .navbar-nav > li > a [class^="fa"] {
     font-size: 18px;
     position: relative;
-    top: 1px;
-    margin-top: -3px;
+    margin-top: 1px;
 }
 
 .navbar .btn {
-    margin: 15px 3px;
+    margin: 15px 15px;
     font-size: 14px;
 }
 
@@ -1793,7 +1836,7 @@ a,
 
 .navbar-default {
     background-color: white;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 0px solid rgba(0, 0, 0, 0);
 }
 
 .navbar-default .navbar-nav > li > a:not(.btn) {
@@ -1848,14 +1891,14 @@ a,
 }
 
 .navbar-transparent {
-    padding-top: 15px;
+    padding-top: 0px;
     background-color: transparent;
-    border-bottom: 1px solid transparent;
+    border-bottom: 0px solid transparent;
 }
 
 .navbar-toggle {
-    margin-top: 19px;
-    margin-bottom: 19px;
+    margin-top: 10px;
+    margin-bottom: 0px;
     border: 0;
 }
 
@@ -1877,7 +1920,7 @@ a,
 }
 
 .navbar.navbar-fixed-top {
-    transition: all .5s .1s;
+    transition: all .2s .2s;
 }
 
 @media (min-width: 768px) {
@@ -2534,7 +2577,7 @@ a,
     border-radius: 4px;
 }
 .section-header {
-    background: url('../images/header-bg.png');
+    background: url('');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -2596,8 +2639,8 @@ a,
 .section-header-blog h1,
 .section-presentation-page h1 {
     font-weight: 400;
-    font-size: 3.6em;
-    text-shadow: -2px 2px 0px rgba(0, 0, 0, 0.3), -2px 4px 2px rgba(0, 0, 0, 0.1);
+    font-size: 6em;
+    text-shadow: -4px 4px 0px rgba(0, 0, 0, 0.3), -4px 6px 4px rgba(0, 0, 0, 0.1);
 }
 
 .section-header h5,
@@ -3455,8 +3498,8 @@ a,
     }
 
     .section-header .content h1 {
-        font-size: 4.5em;
-        letter-spacing: 0.07em;
+        font-size: 4.8em;
+        letter-spacing: 0.08em;
         line-height: 1.7;
     }
 
@@ -3495,25 +3538,26 @@ a,
 
 @media (max-width: 768px) {
     h1 {
-        font-size: 2em;
+        font-size: 2.5em;
         line-height: 1.25;
     }
 
     h1.responsive-small {
-        font-size: 2.3em !important;
+        font-size: 2.25em !important;
     }
 
     h2 {
-        font-size: 1.625em;
+        font-size: 2em;
         line-height: 1.15384615;
     }
 
     h3 {
-        font-size: 1.375em;
+        font-size: 1.5em;
         line-height: 1.13636364;
     }
 
     h4 {
+        font-size: 1em;
         line-height: 1.11111111;
     }
 
