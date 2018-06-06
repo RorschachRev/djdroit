@@ -22,19 +22,18 @@ from django.conf.urls.static import static
 from mydj import views
 
 urlpatterns = [
-    url(r'^$',  views.index, name='base'),
-    url(r'^index.html$', views.index, name='index'),
-    url(r'^login/$', auth_views.login, {'template_name': 'pages/login.html'}, name='login'),
-    url(r'^logout/$', auth_views.logout, {'template_name': 'pages/logout.html'}, name='logout'),
-    url(r'^expo.html$', views.expo, name='expo'),
-    url(r'^profile.html$', views.update_profile, name='profile'),
-    url(r'^shop.html$', views.shop, name='shop'),
-    url(r'^expomap.html$', views.expomap, name='expomap'),
-    url(r'^edit.html$', views.edit, name='edit'),
-    url(r'^admin/', admin.site.urls),
-    url(r'^signup.html$', views.signup, name='signup'),
-    url(r'^members.html$', views.members, name='members'),
-    url(r'^contact.html$', views.contact, name='contact'),
-    url(r'^ardemo.html$', views.ardemo, name='ardemo'),
+	url(r'^$',  views.index, name='base'),
+	url(r'^index.html$', views.index, name='index'),
+	url(r'^login/$', auth_views.login, {'template_name': 'pages/login.html'}, name='login'),
+	url(r'^logout/$', auth_views.logout, {'template_name': 'pages/logout.html'}, name='logout'),
+	url(r'^expo.html$', views.expo, name='expo'),
+	url(r'^profile.html$', views.update_profile, name='profile'),
+	#url(r'^shop.html$', views.shop, name='shop'),
+	url(r'^expomap.html$', views.expomap, name='expomap'),
+	#url(r'^edit.html$', views.edit, name='edit'),
+	url(r'^admin/', admin.site.urls),
+	url(r'^signup.html$', views.signup, name='signup'),
+	url(r'^members.html$', views.members, name='members'),
+	url(r'^contact.html$', views.contact, name='contact'),
+	url(r'^ardemo.html$', views.ardemo, name='ardemo'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
-
