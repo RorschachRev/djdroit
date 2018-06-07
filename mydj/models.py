@@ -5,7 +5,7 @@ from django.dispatch import receiver
 
 class Profile(models.Model):
 	user = models.OneToOneField(User, on_delete=models.CASCADE)
-	is_exhibitor= models.BooleanField(default=False)
+	#is_exhibitor= models.BooleanField(default=False)
 	company_name = models.TextField(max_length=200, blank=True)
 	#is_artist = models.BooleanField(default=False)
 

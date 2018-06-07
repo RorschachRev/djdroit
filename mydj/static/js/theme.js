@@ -72,33 +72,6 @@
     $document.ready(function(){
         
         /*
-        * Window scroll
-        */
-       
-        $window.on('scroll', function(){
-        
-            if ($document.scrollTop() > navHeight){
-                
-                /** Shrink navigation */
-                $header.addClass('shrink');
-                $navbar.addClass('shrink');
-                
-                /** Scroll to top */
-                $scrollToTop.fadeIn();
-            }
-            else{
-                
-                /** Shrink navigation */
-                $header.removeClass('shrink');
-                $navbar.removeClass('shrink');
-                
-                /** Scroll to top */
-                $scrollToTop.fadeOut();
-            }
-        });
-        
-        
-        /*
         * Window resize
         */
        

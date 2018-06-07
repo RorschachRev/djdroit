@@ -15,7 +15,7 @@ class UserForm(forms.ModelForm):
 class ProfileForm(forms.ModelForm):
 	class Meta:
 		model = Profile
-		fields = ('is_exhibitor', 'company_name')
+		fields = ('company_name',)
 
 class StoreEditForm(forms.ModelForm):
 	class Meta:
