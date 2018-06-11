@@ -35,5 +35,5 @@ urlpatterns = [
 	url(r'^signup.html$', views.signup, name='signup'),
 	url(r'^members.html$', views.members, name='members'),
 	url(r'^contact.html$', views.contact, name='contact'),
-	url(r'^ardemo.html$', views.ardemo, name='ardemo'),
+	#url(r'^ardemo.html$', views.ardemo, name='ardemo'),
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
