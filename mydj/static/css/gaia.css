@@ -110,6 +110,7 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    opacity: 1;
     color: white;
 }
 
@@ -130,7 +131,7 @@
 }
 
 .event-image-5 {
-    background-image: url('/static/img/background-images/abstract-bulb-1.jpg');
+    background-image: url('/static/img/background-images/darklight.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -138,11 +139,13 @@
 }
 
 .event-image-6 {
-    background-image: url('/static/img/background-images/abstract-bulb-2.jpg');
+    background-image: url('/static/img/background-images/boise-1.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
+    text-shadow: 1.5px 1.5px black;
+   
 }
 
 .event-image-7 {
