@@ -120,7 +120,6 @@ CSS IDENTIFIERS:
     color: white;
     font-weight: normal;
     font-size:20px;
-    text-transform: uppercase; 
     text-shadow: 0 -4px 8px rgba(0, 0, 0, 0.9) ; 
     -webkit-text-shadow: 0 -4px 8px rgba(0, 0, 0, 0.9) ; 
     -moz-text-shadow: 0 -4px 8px rgba(0, 0, 0, 0.9) ;
@@ -133,8 +132,8 @@ CSS IDENTIFIERS:
     font-family: "Roboto", "Montserrat", sans-serif;
     color: black;
     font-weight: normal;
-    font-size:35px;
-    text-transform: capitalize; 
+    font-size:25px;
+    
     -webkit-text-shadow: 0 -4px 8px rgba(0, 0, 0, 0.9) ; 
     -moz-text-shadow: 0 -4px 8px rgba(0, 0, 0, 0.9) ;
     padding-top: 40px;
@@ -321,7 +320,13 @@ At anyrate, this fixes the overlap of images in the about section.
 
 }*/
 
+.event-image-9 a {
+    color: #2F4F4F;
+}
 
+.event-image-9 a:hover {
+    color: #FFF;
+}
 
 
 
